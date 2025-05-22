@@ -24,6 +24,14 @@
   &__error {
     border-color: red;
   }
+  &__password {
+    position: absolute;
+    right: var(--space-xs);
+    height: 4rem;
+    line-height: 4rem;
+    width: 2rem;
+    cursor: pointer;
+  }
 }
 
 .focus {

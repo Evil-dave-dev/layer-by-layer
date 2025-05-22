@@ -1,10 +1,10 @@
 "use client";
-import { useState } from "react";
-import { auth } from "@/lib/firebase";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
-import CustomButton from "../../../components/CustomButton/CustomButton";
-import CustomInput from "../../../components/CustomInput/CustomInput";
+import { useState } from "react";
+import { auth } from "@/app/lib/firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { CustomButton, CustomInput } from "@/app/ui/components/index";
 import styles from "./styles.module.scss";
 
 const LoginPage = () => {
@@ -57,17 +57,25 @@ const LoginPage = () => {
   return (
     <section className={styles.container}>
       <div className={styles.content}>
-        <h2>Login</h2>
+        <div>
+          <h2>Login</h2>
+          <p>
+            Vous n'avez pas encore de compte ?{" "}
+            <Link href="/RegisterPage" className={styles.link}>
+              Inscrivez-vous
+            </Link>
+          </p>
+        </div>
         <form className={styles.form} onSubmit={handleLogin} noValidate>
           <CustomInput
             label="email"
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(val) => setEmail(val)}
             type="email"
             error={errors.email}
           />
           <CustomInput
             label="password"
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(val) => setPassword(val)}
             type="password"
             error={errors.password}
           />

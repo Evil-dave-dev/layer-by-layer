@@ -1,16 +1,16 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
-import { auth } from "@/lib/firebase";
+import { auth } from "@/app/lib/firebase";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useRouter } from "next/navigation";
-import CustomInput from "../../../components/CustomInput/CustomInput";
-import CustomButton from "../../../components/CustomButton/CustomButton";
+import { CustomButton, CustomInput } from "@/app/ui/components/index";
 import styles from "./styles.module.scss";
 
 const RegisterPage = () => {
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [username, setUsername] = useState("");
   const [errors, setErrors] = useState({});
   const router = useRouter();
 
@@ -64,23 +64,31 @@ const RegisterPage = () => {
   return (
     <section className={styles.container}>
       <div className={styles.content}>
-        <h2>Register</h2>
+        <div>
+          <h2>Register</h2>
+          <p>
+            Vous avez déjà un compte ?{" "}
+            <Link href="/LoginPage" className={styles.link}>
+              Connectez-vous
+            </Link>
+          </p>
+        </div>
         <form className={styles.form} onSubmit={handleRegister} noValidate>
           <CustomInput
             label="nom"
-            onChange={(e) => setUsername(e.target.value)}
+            onChange={(val) => setUsername(val)}
             type="text"
             error={errors.username}
           />
           <CustomInput
             label="email"
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(val) => setEmail(val)}
             type="email"
             error={errors.email}
           />
           <CustomInput
             label="password"
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(val) => setPassword(val)}
             type="password"
             error={errors.password}
           />

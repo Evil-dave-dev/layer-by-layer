@@ -5,9 +5,15 @@
   color: var(--light);
   padding: var(--space-xs) var(--space-sm);
   border-radius: var(--radius-sm);
+  cursor: pointer;
 }
 
 .secondary {
   background-color: var(--white);
   color: var(--primary);
+}
+
+.small {
+  padding: 0.4rem 0.8rem;
+  font-size: var(--font-sm);
 }

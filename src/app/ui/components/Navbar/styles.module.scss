@@ -1,8 +1,13 @@
 .container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: var(--space-md) var(--space-lg);
   background-color: var(--background);
+  z-index: 1;
 }
 
 .links {
@@ -27,6 +32,7 @@
     padding: var(--space-xs) var(--space-md);
     border-radius: var(--radius-sm);
     color: var(--white);
+    cursor: pointer;
   }
   &__container {
     position: relative;

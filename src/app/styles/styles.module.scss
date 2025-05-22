@@ -1,0 +1,52 @@
+.banner {
+  background-image: linear-gradient(rgba(4, 4, 4, 0.3), rgba(4, 4, 4, 0.5)),
+    url("/banner.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 30rem;
+  padding: var(--space-lg);
+  margin: 0 calc(var(--space-lg) * -1);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--space-md);
+  color: var(--white);
+}
+
+.projects {
+  margin: var(--space-lg) 0;
+  &__title {
+    margin-bottom: var(--space-md);
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: var(--space-lg);
+  }
+  &__add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    background-color: var(--light);
+  }
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal {
+  width: calc(100% - (2 * var(--space-lg)));
+  max-width: 70rem;
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  background-color: var(--light);
+}
