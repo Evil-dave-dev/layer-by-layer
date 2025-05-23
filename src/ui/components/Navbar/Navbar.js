@@ -1,7 +1,7 @@
 import { House, LogOut, Settings, User } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { auth } from "@/app/lib/firebase";
+import { auth } from "@/lib/firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import CustomButton from "../CustomButton/CustomButton";
 import styles from "./styles.module.scss";

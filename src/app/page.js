@@ -1,17 +1,13 @@
 "use client";
 import Link from "next/link";
+import { auth } from "@/lib/firebase";
 import { useEffect, useRef, useState } from "react";
-import {
-  CustomButton,
-  CustomInput,
-  ProjectThumbnail,
-} from "@/app/ui/components/index";
-import { createProject, readProjects } from "@/app/services/projectService";
-import { readAllPaintings } from "@/app/services/paintingService";
-import { auth } from "@/app/lib/firebase";
+import { CustomButton, CustomInput, ProjectThumbnail } from "@/ui/components";
+import Typography from "@/ui/design-system/typography";
+import { createProject, readProjects } from "@/services/projectService";
+import { readAllPaintings } from "@/services/paintingService";
 import { Plus } from "lucide-react";
-import styles from "@/app/styles/styles.module.scss";
-import Typography from "./ui/design-system/typography";
+import styles from "@/styles/styles.module.scss";
 
 const HomePage = () => {
   const [projects, setProjects] = useState([]);

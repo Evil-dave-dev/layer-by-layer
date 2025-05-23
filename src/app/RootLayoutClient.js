@@ -1,7 +1,7 @@
 "use client";
 // fonctionnalité côté client, contient Navbar + usePathname().
 import { usePathname } from "next/navigation";
-import Navbar from "./ui/components/Navbar/Navbar";
+import { Navbar } from "@/ui/components";
 
 const noNavbarRoutes = ["/LoginPage", "/RegisterPage", "/ResetPasswordPage"];
 
