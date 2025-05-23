@@ -92,7 +92,7 @@ const RegisterPage = () => {
             type="password"
             error={errors.password}
           />
-          <CustomButton children="register" type="submit" />
+          <CustomButton type="submit">register</CustomButton>
         </form>
       </div>
     </section>

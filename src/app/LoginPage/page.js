@@ -60,7 +60,7 @@ const LoginPage = () => {
         <div>
           <h2>Login</h2>
           <p>
-            Vous n'avez pas encore de compte ?{" "}
+            Vous n&#39;avez pas encore de compte ?{" "}
             <Link href="/RegisterPage" className={styles.link}>
               Inscrivez-vous
             </Link>
@@ -79,7 +79,7 @@ const LoginPage = () => {
             type="password"
             error={errors.password}
           />
-          <CustomButton children="login" type="submit" />
+          <CustomButton type="submit">login</CustomButton>
         </form>
       </div>
     </section>

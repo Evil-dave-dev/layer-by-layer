@@ -100,11 +100,9 @@ const HomePage = () => {
                     onChange={(e) => setDescription(e)}
                     type="text"
                   />
-                  <CustomButton
-                    children="register"
-                    type="button"
-                    onClick={handlecreateProject}
-                  />
+                  <CustomButton type="button" onClick={handlecreateProject}>
+                    register
+                  </CustomButton>
                 </form>
               </div>
             </div>
