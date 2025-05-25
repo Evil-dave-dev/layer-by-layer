@@ -1,26 +1,9 @@
-@use "sass:map";
+// @use "sass:map";
 @use "./breakpoints" as *;
+@import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --primary: #1481ba;
-  --secondary: #11b5e4;
-  --tertiary: #0caadc;
-  --background: #dbd8f0;
-  --light: #f2f4ff;
-  --dark: #040404;
-  --white: #fff;
-
-  /* Font sizes (10px = 1rem) */
-  --font-xs: 1.2rem;
-  --font-sm: 1.4rem;
-  --font-md: 1.6rem;
-  --font-lg: 2rem;
-  --font-xl: 2.4rem;
-  --font-2xl: 3rem;
-  --font-3xl: 3.6rem;
-  --font-4xl: 4.8rem;
-
   /* Spacing (margins, paddings) */
   --space-xxs: 0.4rem;
   --space-xs: 0.8rem;
@@ -30,11 +13,6 @@
   --space-xl: 3.2rem;
   --space-2xl: 4rem;
   --space-3xl: 6.4rem;
-
-  /* Line heights */
-  --line-tight: 1.2;
-  --line-normal: 1.5;
-  --line-loose: 1.75;
 
   /* Border radius */
   --radius-sm: 0.4rem;
@@ -65,7 +43,6 @@ body {
   line-height: var(--line-normal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: var(--dark);
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -106,41 +83,5 @@ ul {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-  }
-}
-
-$font-sizes: (
-  h1: (
-    mobile: var(--font-3xl),
-    desktop: var(--font-3xl),
-  ),
-  h2: (
-    mobile: var(--font-2xl),
-    desktop: var(--font-2xl),
-  ),
-  h3: (
-    mobile: var(--font-lg),
-    desktop: var(--font-lg),
-  ),
-  h4: (
-    mobile: var(--font-md),
-    desktop: var(--font-md),
-  ),
-  h5: (
-    mobile: var(--font-sm),
-    desktop: var(--font-sm),
-  ),
-  h6: (
-    mobile: var(--font-xs),
-    desktop: var(--font-xs),
-  ),
-);
-
-@each $header, $sizes in $font-sizes {
-  #{$header} {
-    font-size: map.get($sizes, mobile);
-    @include breakpoint(medium) {
-      font-size: map.get($sizes, desktop);
-    }
   }
 }

@@ -1,16 +1,9 @@
 .container {
   width: 100%;
   max-width: fit-content;
-  background-color: var(--primary);
-  color: var(--light);
   padding: var(--space-xs) var(--space-sm);
   border-radius: var(--radius-sm);
   cursor: pointer;
-}
-
-.secondary {
-  background-color: var(--white);
-  color: var(--primary);
 }
 
 .small {

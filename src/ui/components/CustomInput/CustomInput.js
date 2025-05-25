@@ -2,6 +2,7 @@
 import { useState } from "react";
 import styles from "./styles.module.scss";
 import { Eye, EyeOff } from "lucide-react";
+import Typography from "@/ui/design-system/typography";
 
 const CustomInput = ({ onChange, value = "", label, type, error }) => {
   const [inputValue, setInputValue] = useState(value);
@@ -20,12 +21,13 @@ const CustomInput = ({ onChange, value = "", label, type, error }) => {
 
   return (
     <div className={styles.container}>
-      <label
+      <Typography
+        component="label"
         htmlFor={label}
         className={`${styles.label} ${focusedLabel ? styles.focus : ""}`}
       >
         {label}
-      </label>
+      </Typography>
       <input
         type={inpuType}
         id={label}

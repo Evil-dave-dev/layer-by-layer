@@ -10,7 +10,6 @@
   justify-content: center;
   flex-direction: column;
   gap: var(--space-md);
-  color: var(--white);
 }
 
 .projects {
@@ -30,7 +29,6 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     padding: var(--space-md);
     border-radius: var(--radius-md);
-    background-color: var(--light);
   }
 }
 
@@ -48,5 +46,4 @@
   max-width: 70rem;
   padding: var(--space-lg);
   border-radius: var(--radius-md);
-  background-color: var(--light);
 }

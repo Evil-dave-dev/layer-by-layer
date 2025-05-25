@@ -4,8 +4,9 @@ import { auth } from "@/lib/firebase";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { CustomButton, CustomInput } from "@/app/ui/components/index";
+import { CustomButton, CustomInput } from "@/ui/components/index";
 import styles from "./styles.module.scss";
+import Typography from "@/ui/design-system/typography";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -58,13 +59,15 @@ const LoginPage = () => {
     <section className={styles.container}>
       <div className={styles.content}>
         <div>
-          <h2>Login</h2>
-          <p>
+          <Typography component="h2" variant="h2">
+            Login
+          </Typography>
+          <Typography component="h3" variant="body-base">
             Vous n&#39;avez pas encore de compte ?{" "}
             <Link href="/RegisterPage" className={styles.link}>
               Inscrivez-vous
             </Link>
-          </p>
+          </Typography>
         </div>
         <form className={styles.form} onSubmit={handleLogin} noValidate>
           <CustomInput

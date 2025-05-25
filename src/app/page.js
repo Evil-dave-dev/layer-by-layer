@@ -62,13 +62,17 @@ const HomePage = () => {
   return (
     <>
       <section className={styles.banner}>
-        <h1>Layer by Layer</h1>
+        <Typography component="h1" variant="h1" theme="white">
+          Layer by Layer
+        </Typography>
         <CustomButton>
           <Link href="/ProjectsPage">créer un nouveau projet</Link>
         </CustomButton>
       </section>
       <section className={styles.projects}>
-        <h2 className={styles.projects__title}>Projets</h2>
+        <Typography component="h3" variant="h3">
+          Projets
+        </Typography>
         <div className={styles.projects__grid}>
           {projects.map((project) => (
             <div key={project.id}>
@@ -88,7 +92,9 @@ const HomePage = () => {
           {isCreateProjectMenuOpen && (
             <div className={styles.overlay}>
               <div ref={menuRef} className={styles.modal}>
-                <h3>Nouveau projet</h3>
+                <Typography component="h3" variant="h3">
+                  Nouveau projet
+                </Typography>
                 <form noValidate>
                   <CustomInput
                     label="name"
@@ -110,8 +116,9 @@ const HomePage = () => {
         </div>
       </section>
       <section className={styles.paintings}>
-        <h2 className={styles.projects__title}>Peintures</h2>
-        <Typography>Texte</Typography>
+        <Typography component="h3" variant="h3">
+          Peintures
+        </Typography>
         <div className={styles.projects__grid}>
           {paintings.map((painting) => (
             <div key={painting.id}>{painting.name}</div>

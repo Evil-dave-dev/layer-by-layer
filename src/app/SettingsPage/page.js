@@ -1,9 +1,12 @@
+import Typography from "@/ui/design-system/typography";
 import React from "react";
 
 const SettingsPage = () => {
   return (
     <>
-      <h1>SettingsPage</h1>
+      <Typography component="h2" variant="h2">
+        SettingsPage
+      </Typography>
     </>
   );
 };

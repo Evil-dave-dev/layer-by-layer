@@ -6,7 +6,6 @@
   display: flex;
   justify-content: space-between;
   padding: var(--space-md) var(--space-lg);
-  background-color: var(--background);
   z-index: 1;
 }
 
@@ -28,10 +27,8 @@
 .user {
   &__button {
     @extend .link;
-    background-color: var(--primary);
     padding: var(--space-xs) var(--space-md);
     border-radius: var(--radius-sm);
-    color: var(--white);
     cursor: pointer;
   }
   &__container {
@@ -46,7 +43,6 @@
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: var(--white);
     border-radius: var(--radius-sm);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
@@ -55,8 +51,5 @@
     gap: var(--space-xs);
     padding: var(--space-md);
     cursor: pointer;
-    &:hover {
-      background-color: var(--light);
-    }
   }
 }

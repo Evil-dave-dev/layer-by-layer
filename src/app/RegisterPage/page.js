@@ -4,8 +4,9 @@ import { auth } from "@/lib/firebase";
 import { useState } from "react";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useRouter } from "next/navigation";
-import { CustomButton, CustomInput } from "@/app/ui/components/index";
+import { CustomButton, CustomInput } from "@/ui/components/index";
 import styles from "./styles.module.scss";
+import Typography from "@/ui/design-system/typography";
 
 const RegisterPage = () => {
   const [username, setUsername] = useState("");
@@ -65,13 +66,15 @@ const RegisterPage = () => {
     <section className={styles.container}>
       <div className={styles.content}>
         <div>
-          <h2>Register</h2>
-          <p>
+          <Typography component="h2" variant="h2">
+            Register
+          </Typography>
+          <Typography component="body-base" variant="body-base">
             Vous avez déjà un compte ?{" "}
             <Link href="/LoginPage" className={styles.link}>
               Connectez-vous
             </Link>
-          </p>
+          </Typography>
         </div>
         <form className={styles.form} onSubmit={handleRegister} noValidate>
           <CustomInput
