@@ -2,7 +2,7 @@
 import { useState } from "react";
 import styles from "./styles.module.scss";
 import { Eye, EyeOff } from "lucide-react";
-import Typography from "@/ui/design-system/typography";
+import Typography from "@/ui/design-system/typography/typography";
 
 const CustomInput = ({ onChange, value = "", label, type, error }) => {
   const [inputValue, setInputValue] = useState(value);

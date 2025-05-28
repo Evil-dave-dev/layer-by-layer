@@ -1,7 +1,7 @@
 import { Pencil } from "lucide-react";
 import styles from "./styles.module.scss";
 import Link from "next/link";
-import Typography from "@/ui/design-system/typography";
+import Typography from "@/ui/design-system/typography/typography";
 
 const ProjectThumbnail = (image, name, description) => {
   return (

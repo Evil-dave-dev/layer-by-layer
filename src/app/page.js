@@ -3,7 +3,7 @@ import Link from "next/link";
 import { auth } from "@/lib/firebase";
 import { useEffect, useRef, useState } from "react";
 import { CustomButton, CustomInput, ProjectThumbnail } from "@/ui/components";
-import Typography from "@/ui/design-system/typography";
+import Typography from "@/ui/design-system/typography/typography";
 import { createProject, readProjects } from "@/services/projectService";
 import { readAllPaintings } from "@/services/paintingService";
 import {
@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import styles from "@/styles/styles.module.scss";
 import Button from "@/ui/design-system/button/button";
+import Spinner from "@/ui/design-system/spinner/spinner";
 
 const HomePage = () => {
   const [projects, setProjects] = useState([]);
@@ -132,16 +133,21 @@ const HomePage = () => {
           <Button
             size="large"
             icon={{ icon: SkipForward }}
-            iconPosition="right"
-          >
-            SkipForward
-          </Button>
-          <Button size="large" icon={{ icon: SkipBack }} iconPosition="left">
-            SkipBack
-          </Button>
-          <Button size="small" icon={{ icon: RotateCw }}>
-            Rotate
-          </Button>
+            variant="icon"
+            iconTheme="accent"
+          />
+          <Button
+            variant="icon"
+            icon={{ icon: SkipBack }}
+            iconTheme="secondary"
+            isLoading
+          />
+          <Button
+            variant="icon"
+            size="small"
+            icon={{ icon: RotateCw }}
+            iconTheme="gray"
+          />
         </div>
       </section>
     </>

@@ -38,23 +38,19 @@
   --space-3xl: 6.4rem;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 html {
   font-family: "Montserrat", sans-serif;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden; */
 }
-
+/* 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   max-width: 100%;
   overflow-x: hidden;
-}
+} */
 
 .page-wrapper {
   padding: 6.3rem var(--space-lg);
