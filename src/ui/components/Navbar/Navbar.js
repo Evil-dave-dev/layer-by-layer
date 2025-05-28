@@ -1,9 +1,9 @@
 import { House, LogOut, Settings, User } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import Button from "@/ui/design-system/button/button";
 import Link from "next/link";
 import { auth } from "@/lib/firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import CustomButton from "../CustomButton/CustomButton";
 import styles from "./styles.module.scss";
 
 const Navbar = () => {
@@ -64,12 +64,12 @@ const Navbar = () => {
           </button>
         ) : (
           <>
-            <CustomButton type="button" secondary>
+            <Button variant="outline">
               <Link href="RegisterPage">inscrivez-vous</Link>
-            </CustomButton>
-            <CustomButton type="button">
+            </Button>
+            <Button>
               <Link href="/LoginPage">connectez-vous</Link>
-            </CustomButton>
+            </Button>
           </>
         )}
         {isUserMenuOpen && (

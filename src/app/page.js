@@ -6,18 +6,10 @@ import { CustomButton, CustomInput, ProjectThumbnail } from "@/ui/components";
 import Typography from "@/ui/design-system/typography/typography";
 import { createProject, readProjects } from "@/services/projectService";
 import { readAllPaintings } from "@/services/paintingService";
-import {
-  CircleDollarSign,
-  Euro,
-  Plus,
-  PoundSterling,
-  RotateCw,
-  SkipBack,
-  SkipForward,
-} from "lucide-react";
+import { Plus } from "lucide-react";
 import styles from "@/styles/styles.module.scss";
 import Button from "@/ui/design-system/button/button";
-import Spinner from "@/ui/design-system/spinner/spinner";
+import Avatar from "@/ui/design-system/avatar/avatar";
 
 const HomePage = () => {
   const [projects, setProjects] = useState([]);
@@ -75,9 +67,9 @@ const HomePage = () => {
         <Typography component="h1" variant="h1" theme="white">
           Layer by Layer
         </Typography>
-        <CustomButton>
+        <Button variant="secondary">
           <Link href="/ProjectsPage">créer un nouveau projet</Link>
-        </CustomButton>
+        </Button>
       </section>
       <section className={styles.projects}>
         <Typography component="h3" variant="h3">
@@ -92,13 +84,9 @@ const HomePage = () => {
               />
             </div>
           ))}
-          <button
-            className={styles.projects__add}
-            onClick={() => setIsCreateProjectMenuOpen((prev) => !prev)}
-          >
+          <Button variant="outline" iconPosition="right" icon={{ icon: Plus }}>
             nouveau projet
-            <Plus />
-          </button>
+          </Button>
           {isCreateProjectMenuOpen && (
             <div className={styles.overlay}>
               <div ref={menuRef} className={styles.modal}>
@@ -129,26 +117,9 @@ const HomePage = () => {
         <Typography component="h3" variant="h3">
           Peintures
         </Typography>
-        <div>
-          <Button
-            size="large"
-            icon={{ icon: SkipForward }}
-            variant="icon"
-            iconTheme="accent"
-          />
-          <Button
-            variant="icon"
-            icon={{ icon: SkipBack }}
-            iconTheme="secondary"
-            isLoading
-          />
-          <Button
-            variant="icon"
-            size="small"
-            icon={{ icon: RotateCw }}
-            iconTheme="gray"
-          />
-        </div>
+        <Avatar size="small" src="/assets/images/archaon.png" alt="archaon" />
+        <Avatar src="/assets/images/thorgrim.png" alt="thorgrim" />
+        <Avatar size="large" src="/assets/images/krok gar.png" alt="kroq gar" />
       </section>
     </>
   );

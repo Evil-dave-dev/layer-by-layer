@@ -6,7 +6,8 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { CustomButton, CustomInput } from "@/ui/components/index";
 import styles from "./styles.module.scss";
-import Typography from "@/ui/design-system/typography";
+import Typography from "@/ui/design-system/typography/typography";
+import Button from "@/ui/design-system/button/button";
 
 const RegisterPage = () => {
   const [username, setUsername] = useState("");
@@ -95,7 +96,7 @@ const RegisterPage = () => {
             type="password"
             error={errors.password}
           />
-          <CustomButton type="submit">register</CustomButton>
+          <Button>register</Button>
         </form>
       </div>
     </section>

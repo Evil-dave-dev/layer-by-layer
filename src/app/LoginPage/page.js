@@ -6,7 +6,8 @@ import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { CustomButton, CustomInput } from "@/ui/components/index";
 import styles from "./styles.module.scss";
-import Typography from "@/ui/design-system/typography";
+import Typography from "@/ui/design-system/typography/typography";
+import Button from "@/ui/design-system/button/button";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -82,7 +83,7 @@ const LoginPage = () => {
             type="password"
             error={errors.password}
           />
-          <CustomButton type="submit">login</CustomButton>
+          <Button>login</Button>
         </form>
       </div>
     </section>
