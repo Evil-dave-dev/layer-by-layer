@@ -1,7 +1,30 @@
-// @use "sass:map";
-@use "./breakpoints" as *;
-@import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-primary-200: #ffe099;
+  --color-primary-300: #ffc966;
+  --color-primary-400: #ffb43f;
+  --color-primary: #ff9000; /* DEFAULT */
+  --color-primary-600: #db7200;
+
+  --color-secondary-200: #ce9efd;
+  --color-secondary-300: #ae6efb;
+  --color-secondary-400: #924af7;
+  --color-secondary: #6610f2; /* DEFAULT */
+  --color-secondary-600: #4e0bd0;
+
+  --color-gray-400: #c5cac7;
+  --color-gray: #a2a7a5; /* DEFAULT */
+  --color-gray-600: #768f88;
+  --color-gray-700: #517870;
+  --color-gray-800: #33605c;
+
+  --borderRadius: 0.4rem;
+  --borderRadius-sm: 0.8rem;
+  --borderRadius-lg: 1.2rem;
+  --borderRadius-full: 999rem;
+}
 
 :root {
   /* Spacing (margins, paddings) */
@@ -13,70 +36,28 @@
   --space-xl: 3.2rem;
   --space-2xl: 4rem;
   --space-3xl: 6.4rem;
-
-  /* Border radius */
-  --radius-sm: 0.4rem;
-  --radius-md: 0.8rem;
-  --radius-lg: 1.2rem;
-  --radius-full: 999rem;
 }
 
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 html {
   font-family: "Montserrat", sans-serif;
-  font-size: 62.5%;
-  box-sizing: border-box;
   scroll-behavior: smooth;
   max-width: 100%;
   overflow-x: hidden;
 }
 
 body {
-  font-size: var(--font-md);
-  line-height: var(--line-normal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   max-width: 100%;
   overflow-x: hidden;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-  border: none;
-  outline: none;
-  background: none;
-}
-
-ul {
-  list-style-type: none;
-}
-
 .page-wrapper {
-  padding: 7.2rem var(--space-lg);
+  padding: 6.3rem var(--space-lg);
   min-height: 100vh;
 }
 

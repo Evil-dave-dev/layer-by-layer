@@ -6,8 +6,17 @@ import { CustomButton, CustomInput, ProjectThumbnail } from "@/ui/components";
 import Typography from "@/ui/design-system/typography";
 import { createProject, readProjects } from "@/services/projectService";
 import { readAllPaintings } from "@/services/paintingService";
-import { Plus } from "lucide-react";
+import {
+  CircleDollarSign,
+  Euro,
+  Plus,
+  PoundSterling,
+  RotateCw,
+  SkipBack,
+  SkipForward,
+} from "lucide-react";
 import styles from "@/styles/styles.module.scss";
+import Button from "@/ui/design-system/button/button";
 
 const HomePage = () => {
   const [projects, setProjects] = useState([]);
@@ -119,10 +128,20 @@ const HomePage = () => {
         <Typography component="h3" variant="h3">
           Peintures
         </Typography>
-        <div className={styles.projects__grid}>
-          {paintings.map((painting) => (
-            <div key={painting.id}>{painting.name}</div>
-          ))}
+        <div>
+          <Button
+            size="large"
+            icon={{ icon: SkipForward }}
+            iconPosition="right"
+          >
+            SkipForward
+          </Button>
+          <Button size="large" icon={{ icon: SkipBack }} iconPosition="left">
+            SkipBack
+          </Button>
+          <Button size="small" icon={{ icon: RotateCw }}>
+            Rotate
+          </Button>
         </div>
       </section>
     </>

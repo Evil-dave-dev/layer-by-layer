@@ -1,4 +1,4 @@
-import "../styles/globals.scss";
+import "./globals.css";
 import RootLayoutClient from "./RootLayoutClient";
 
 // fonctionnalité côté serveur, donc incompatible avec les composants clients

@@ -82,8 +82,7 @@ const Typography = ({
         variantStyles,
         colorStyles,
         weight === "medium" && "font-medium",
-        classname,
-        "text-primary"
+        classname
       )}
     >
       {children}
