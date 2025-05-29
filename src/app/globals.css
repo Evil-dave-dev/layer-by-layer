@@ -2,16 +2,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-200: #ffe099;
-  --color-primary-300: #ffc966;
-  --color-primary-400: #ffb43f;
-  --color-primary: #ff9000; /* DEFAULT */
-  --color-primary-600: #db7200;
+  --color-primary-200: #98f8ac;
+  --color-primary-300: #62ea8d;
+  --color-primary-400: #3ad57b;
+  --color-primary: #06ba63; /* DEFAULT */
+  --color-primary-600: #049f64;
 
   --color-secondary-200: #ce9efd;
   --color-secondary-300: #ae6efb;
   --color-secondary-400: #924af7;
-  --color-secondary: #6610f2; /* DEFAULT */
+  --color-secondary: #f08700; /* DEFAULT */
   --color-secondary-600: #4e0bd0;
 
   --color-gray-400: #c5cac7;
@@ -26,39 +26,16 @@
   --borderRadius-full: 999rem;
 }
 
-:root {
-  /* Spacing (margins, paddings) */
-  --space-xxs: 0.4rem;
-  --space-xs: 0.8rem;
-  --space-sm: 1.2rem;
-  --space-md: 1.6rem;
-  --space-lg: 2.4rem;
-  --space-xl: 3.2rem;
-  --space-2xl: 4rem;
-  --space-3xl: 6.4rem;
-}
-
 html {
   font-family: "Montserrat", sans-serif;
-  /* scroll-behavior: smooth;
-  max-width: 100%;
-  overflow-x: hidden; */
-}
-/* 
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  max-width: 100%;
-  overflow-x: hidden;
-} */
-
-.page-wrapper {
-  padding: 6.3rem var(--space-lg);
-  min-height: 100vh;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+a:hover {
+  @apply text-primary;
+}
+
+.animate,
+a,
+a:hover {
+  transition: all 0.2s ease-in-out;
 }

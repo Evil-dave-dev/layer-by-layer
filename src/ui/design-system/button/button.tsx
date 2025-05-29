@@ -94,7 +94,7 @@ const Button = ({
           iconSize,
           sizeStyles,
           isLoading && "cursor-wait",
-          "relative"
+          "relative animate"
         )}
         onClick={() => console.log("click")}
         disabled={disabled}

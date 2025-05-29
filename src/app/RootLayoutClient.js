@@ -1,17 +1,21 @@
 "use client";
-// fonctionnalité côté client, contient Navbar + usePathname().
+// fonctionnalité côté client, contient Navigation + usePathname().
 import { usePathname } from "next/navigation";
-import { Navbar } from "@/ui/components";
+import Navigation from "@/ui/components/navigation/navigation";
 
-const noNavbarRoutes = ["/LoginPage", "/RegisterPage", "/ResetPasswordPage"];
+const noNavigationRoutes = [
+  "/LoginPage",
+  "/RegisterPage",
+  "/ResetPasswordPage",
+];
 
 const RootLayoutClient = ({ children }) => {
   const pathname = usePathname();
-  const hideNavbar = !noNavbarRoutes.includes(pathname);
+  const hideNavigation = !noNavigationRoutes.includes(pathname);
   return (
     <>
-      {hideNavbar && <Navbar />}
-      <main className="page-wrapper">{children}</main>
+      {hideNavigation && <Navigation />}
+      {children}
     </>
   );
 };
