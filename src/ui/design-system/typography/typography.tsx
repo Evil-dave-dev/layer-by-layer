@@ -2,7 +2,18 @@ import clsx from "clsx";
 import React from "react";
 
 interface Props {
-  variant?: "display" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "body-base";
+  variant?:
+    | "display"
+    | "h1"
+    | "h2"
+    | "h3"
+    | "h4"
+    | "h5"
+    | "h6"
+    | "body-base"
+    | "caption1"
+    | "caption2"
+    | "caption3";
   component?:
     | "h1"
     | "h2"
@@ -21,7 +32,7 @@ interface Props {
 }
 
 const Typography = ({
-  variant = "display",
+  variant = "body-base",
   component: Component = "div",
   theme = "black",
   weight = "regular",
@@ -41,7 +52,7 @@ const Typography = ({
     case "h2":
       variantStyles = "text-7xl";
       break;
-    case "h3": // default
+    case "h3":
       variantStyles = "text-6xl";
       break;
     case "h4":
@@ -53,8 +64,17 @@ const Typography = ({
     case "h6":
       variantStyles = "text-3xl";
       break;
-    case "body-base":
-      variantStyles = "text-xl";
+    case "body-base": // default
+      variantStyles = "text-base";
+      break;
+    case "caption1":
+      variantStyles = "text-lg";
+      break;
+    case "caption2":
+      variantStyles = "text-small";
+      break;
+    case "caption3":
+      variantStyles = "text-xs";
       break;
   }
 

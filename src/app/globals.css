@@ -14,12 +14,6 @@
   --color-secondary: #f08700; /* DEFAULT */
   --color-secondary-600: #4e0bd0;
 
-  --color-gray-400: #c5cac7;
-  --color-gray: #a2a7a5; /* DEFAULT */
-  --color-gray-600: #768f88;
-  --color-gray-700: #517870;
-  --color-gray-800: #33605c;
-
   --borderRadius: 0.4rem;
   --borderRadius-sm: 0.8rem;
   --borderRadius-lg: 1.2rem;

@@ -2,6 +2,7 @@
 // fonctionnalité côté client, contient Navigation + usePathname().
 import { usePathname } from "next/navigation";
 import Navigation from "@/ui/components/navigation/navigation";
+import Footer from "@/ui/components/navigation/footer";
 
 const noNavigationRoutes = [
   "/LoginPage",
@@ -16,6 +17,7 @@ const RootLayoutClient = ({ children }) => {
     <>
       {hideNavigation && <Navigation />}
       {children}
+      {hideNavigation && <Footer />}
     </>
   );
 };
