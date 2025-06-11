@@ -2,25 +2,27 @@ import React from "react";
 import Container from "../container/container";
 import Typography from "@/ui/design-system/typography/typography";
 import Image from "next/image";
-import { footerApplicationLinks } from "./app-links";
+import { footerLinks } from "./app-links";
 import { v4 as uuidv4 } from "uuid";
 import ActiveLink from "./active-link";
+import { FooterLinks } from "@/types/app-links";
+import { LinkTypes } from "@/lib/link-type";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  console.log(uuidv4);
-  const footerNavigationList = footerApplicationLinks.map((item, id) => (
-    <div key={uuidv4()}>{item.label}</div>
+
+  const footerNavigationList = footerLinks.map((column) => (
+    <FooterLink key={uuidv4()} data={column} />
   ));
 
   return (
     <div className="bg-gray-900">
       <Container className="flex justify-between py-10">
         <div className="flex flex-col items-center gap-1">
-          <Typography variant="h4" theme="white">
+          <Typography component="h4" variant="h4" theme="white">
             peintures
           </Typography>
-          <Typography variant="body-base" theme="gray">
+          <Typography component="p" variant="body-base" theme="gray">
             jetez un coup d&apos;oeil à des tutoriels de peintures
           </Typography>
           <a
@@ -35,9 +37,7 @@ const Footer = () => {
             />
           </a>
         </div>
-        <div className="">
-          <FooterLink />
-        </div>
+        <div className="flex gap-7">{footerNavigationList}</div>
       </Container>
       <Container className="pt-9 pb-11 space-y-11">
         <hr className="text-gray-500"></hr>
@@ -53,14 +53,18 @@ const Footer = () => {
 
 export default Footer;
 
-const FooterLink = () => {
-  const LinksList = footerApplicationLinks.map((link) => (
+interface footerLinksProps {
+  data: FooterLinks;
+}
+
+const FooterLink = ({ data }: footerLinksProps) => {
+  const linksList = data.links.map((link) => (
     <div key={uuidv4()}>
-      {link.type === "internal" && (
+      {link.type === LinkTypes.INTERNAL && (
         <ActiveLink href={link.baseUrl}>{link.label}</ActiveLink>
       )}
-      {link.type === "external" && (
-        <a href={link.baseUrl} target="_blank">
+      {link.type === LinkTypes.EXTERNAL && (
+        <a target="_blank" href={link.baseUrl}>
           {link.label}
         </a>
       )}
@@ -75,10 +79,10 @@ const FooterLink = () => {
         weight="medium"
         classname="pb-5"
       >
-        titre
+        {data.label}
       </Typography>
       <Typography theme="gray" variant="caption3" classname="space-y-4">
-        {LinksList}
+        {linksList}
       </Typography>
     </div>
   );

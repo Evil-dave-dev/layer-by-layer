@@ -1,4 +1,4 @@
-import { AppLinks } from "@/types/app-links";
+import { AppLinks, FooterLinks } from "@/types/app-links";
 
 export const footerApplicationLinks: AppLinks[] = [
   {
@@ -26,17 +26,17 @@ export const footerUserLinks: AppLinks[] = [
   },
   {
     label: "connexion",
-    baseUrl: "/#",
+    baseUrl: "/login",
     type: "internal",
   },
   {
     label: "inscription",
-    baseUrl: "/#",
+    baseUrl: "/register",
     type: "internal",
   },
   {
     label: "reset mot de passe",
-    baseUrl: "/#",
+    baseUrl: "/resetPassword",
     type: "internal",
   },
 ];
@@ -44,17 +44,33 @@ export const footerUserLinks: AppLinks[] = [
 export const footerSocialNetworkLinks: AppLinks[] = [
   {
     label: "instagram",
-    baseUrl: "/#",
+    baseUrl:
+      "https://www.instagram.com/_warhammer_community?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     type: "external",
   },
   {
     label: "youtube",
-    baseUrl: "/#",
+    baseUrl: "https://youtube.com/@officialwarhammer?si=mRaUmyKSZK_D7czJ",
     type: "external",
   },
   {
     label: "facebook",
-    baseUrl: "/#",
+    baseUrl: "https://www.facebook.com/groups/416641585058414/",
     type: "external",
+  },
+];
+
+export const footerLinks: FooterLinks[] = [
+  {
+    label: "App",
+    links: footerApplicationLinks,
+  },
+  {
+    label: "Utilisateurs",
+    links: footerUserLinks,
+  },
+  {
+    label: "Réseaux",
+    links: footerSocialNetworkLinks,
   },
 ];
