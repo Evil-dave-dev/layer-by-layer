@@ -1,4 +1,5 @@
 import { AppLinks, FooterLinks } from "@/types/app-links";
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
 export const footerApplicationLinks: AppLinks[] = [
   {
@@ -47,16 +48,19 @@ export const footerSocialNetworkLinks: AppLinks[] = [
     baseUrl:
       "https://www.instagram.com/_warhammer_community?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     type: "external",
+    icon: FaInstagram,
   },
   {
     label: "youtube",
     baseUrl: "https://youtube.com/@officialwarhammer?si=mRaUmyKSZK_D7czJ",
     type: "external",
+    icon: FaYoutube,
   },
   {
     label: "facebook",
     baseUrl: "https://www.facebook.com/groups/416641585058414/",
     type: "external",
+    icon: FaFacebook,
   },
 ];
 

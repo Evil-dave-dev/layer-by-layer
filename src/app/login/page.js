@@ -55,20 +55,18 @@ const LoginPage = () => {
   };
 
   return (
-    <section className={styles.container}>
-      <div className={styles.content}>
+    <section>
+      <div>
         <div>
           <Typography component="h2" variant="h2">
             Login
           </Typography>
           <Typography component="h3" variant="body-base">
             Vous n&#39;avez pas encore de compte ?{" "}
-            <Link href="/RegisterPage" className={styles.link}>
-              Inscrivez-vous
-            </Link>
+            <Link href="/RegisterPage">Inscrivez-vous</Link>
           </Typography>
         </div>
-        <form className={styles.form} onSubmit={handleLogin} noValidate>
+        <form onSubmit={handleLogin} noValidate>
           <Button>login</Button>
         </form>
       </div>

@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from "uuid";
 import ActiveLink from "./active-link";
 import { FooterLinks } from "@/types/app-links";
 import { LinkTypes } from "@/lib/link-type";
+import SocialNetworkButtons from "./social-network-buttons";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -31,7 +32,7 @@ const Footer = () => {
           >
             <Image
               src="/assets/svg/youtube.svg"
-              width={351}
+              width={251}
               height={240}
               alt="tuto peintures | youtube"
             />
@@ -45,6 +46,9 @@ const Footer = () => {
           <Typography variant="caption3" theme="gray">
             {`Copyright @ ${currentYear} | Propulsed by David Stevenoot - Layer by Layer`}
           </Typography>
+          <div>
+            <SocialNetworkButtons theme="gray" />
+          </div>
         </div>
       </Container>
     </div>

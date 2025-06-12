@@ -62,20 +62,18 @@ const RegisterPage = () => {
   };
 
   return (
-    <section className={styles.container}>
-      <div className={styles.content}>
+    <section>
+      <div>
         <div>
           <Typography component="h2" variant="h2">
             Register
           </Typography>
           <Typography component="body-base" variant="body-base">
             Vous avez déjà un compte ?{" "}
-            <Link href="/LoginPage" className={styles.link}>
-              Connectez-vous
-            </Link>
+            <Link href="/LoginPage">Connectez-vous</Link>
           </Typography>
         </div>
-        <form className={styles.form} onSubmit={handleRegister} noValidate>
+        <form onSubmit={handleRegister} noValidate>
           <Button>register</Button>
         </form>
       </div>
