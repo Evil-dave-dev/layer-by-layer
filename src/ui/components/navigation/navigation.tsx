@@ -28,7 +28,7 @@ const Navigation = ({}: Props) => {
           <Typography
             variant="body-base"
             component="div"
-            classname="flex items-center gap-7"
+            className="flex items-center gap-7"
           >
             <ActiveLink href="/settings">Settings</ActiveLink>
             <Link href="/projets">Projets</Link>

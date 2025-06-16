@@ -27,7 +27,7 @@ interface Props {
     | "label";
   theme?: "black" | "gray" | "white" | "primary" | "secondary";
   weight?: "regular" | "medium";
-  classname?: string;
+  className?: string;
   children: React.ReactNode;
 }
 
@@ -36,7 +36,7 @@ const Typography = ({
   component: Component = "div",
   theme = "black",
   weight = "regular",
-  classname,
+  className,
   children,
 }: Props) => {
   let variantStyles: string = "",
@@ -102,7 +102,7 @@ const Typography = ({
         variantStyles,
         colorStyles,
         weight === "medium" && "font-medium",
-        classname
+        className
       )}
     >
       {children}

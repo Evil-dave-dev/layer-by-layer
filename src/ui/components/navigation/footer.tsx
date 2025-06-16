@@ -81,11 +81,11 @@ const FooterLink = ({ data }: footerLinksProps) => {
         theme="white"
         variant="caption2"
         weight="medium"
-        classname="pb-5"
+        className="pb-5"
       >
         {data.label}
       </Typography>
-      <Typography theme="gray" variant="caption3" classname="space-y-4">
+      <Typography theme="gray" variant="caption3" className="space-y-4">
         {linksList}
       </Typography>
     </div>

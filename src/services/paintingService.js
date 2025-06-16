@@ -1,4 +1,4 @@
-import { db } from "@/lib/firebase";
+import { db } from "@/config/firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 
 export const readAllPaintings = async () => {
