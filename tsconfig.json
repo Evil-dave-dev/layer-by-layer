@@ -28,7 +28,8 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/ui/modules/landing-page/components/hero-top"
+    "src/ui/modules/landing-page/components/hero-top",
+    "src/ui/modules/landing-page/components/featured-view"
   ],
   "exclude": ["node_modules"]
 }

@@ -14,12 +14,15 @@
   --color-secondary: #f08700; /* DEFAULT */
   --color-secondary-600: #4e0bd0;
 
-  --color-gray-400: #868b8b;
-  --color-gray-500: #3c3f3f;
-  --color-gray-600: #2b3536;
-  --color-gray: #1e2a2d; /* DEFAULT */
-  --color-gray-800: #132024;
-  --color-gray-900: #0b171e;
+  --color-gray-100: #f5f5f5;
+  --color-gray-200: #e5e5e5;
+  --color-gray-300: #d4d4d4;
+  --color-gray-400: #a3a3a3;
+  --color-gray-500: #737373;
+  --color-gray-600: #525252;
+  --color-gray: #404040; /* DEFAULT */
+  --color-gray-800: #262626;
+  --color-gray-900: #171717;
 
   --borderRadius: 0.4rem;
   --borderRadius-sm: 0.8rem;

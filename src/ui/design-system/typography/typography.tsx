@@ -11,6 +11,7 @@ interface Props {
     | "h5"
     | "h6"
     | "body-base"
+    | "body-lg"
     | "caption1"
     | "caption2"
     | "caption3";
@@ -66,6 +67,9 @@ const Typography = ({
       break;
     case "body-base": // default
       variantStyles = "text-base";
+      break;
+    case "body-lg": // default
+      variantStyles = "text-lg";
       break;
     case "caption1":
       variantStyles = "text-lg";
