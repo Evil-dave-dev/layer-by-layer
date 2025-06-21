@@ -9,7 +9,6 @@ import Link from "next/link";
 const Breadcrumbs = () => {
   const router = usePathname();
   const segments = router.split("/");
-  console.log("segments : ", segments);
   const lastSegment = segments[segments.length - 1];
   segments[0] = "accueil";
 

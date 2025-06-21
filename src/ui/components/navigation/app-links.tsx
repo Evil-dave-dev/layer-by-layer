@@ -13,8 +13,8 @@ export const footerApplicationLinks: AppLinks[] = [
     type: "internal",
   },
   {
-    label: "projects",
-    baseUrl: "/projects",
+    label: "project",
+    baseUrl: "/project",
     type: "internal",
   },
 ];
@@ -27,17 +27,17 @@ export const footerUserLinks: AppLinks[] = [
   },
   {
     label: "connexion",
-    baseUrl: "/login",
+    baseUrl: "/connexion",
     type: "internal",
   },
   {
     label: "inscription",
-    baseUrl: "/register",
+    baseUrl: "/connexion/inscription",
     type: "internal",
   },
   {
     label: "reset mot de passe",
-    baseUrl: "/resetPassword",
+    baseUrl: "/connexion/mot-de-passe-perdu",
     type: "internal",
   },
 ];

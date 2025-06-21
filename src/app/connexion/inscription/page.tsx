@@ -1,16 +1,16 @@
 import Seo from "@/ui/components/seo/seo";
-import LoginContainer from "@/ui/modules/authentification/login/login.container";
+import RegisterContainer from "@/ui/modules/authentification/register/register.container";
 
-const Connexion = () => {
+const Register = () => {
   return (
     <>
       <Seo
         title="layer by layer"
         description="venez peindre vos figurines de warhammer"
       />
-      <LoginContainer />
+      <RegisterContainer />
     </>
   );
 };
 
-export default Connexion;
+export default Register;

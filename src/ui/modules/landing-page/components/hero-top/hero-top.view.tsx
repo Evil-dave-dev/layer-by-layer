@@ -16,8 +16,8 @@ const HeroTopView = () => {
           utilises et reviens dessus dès que l&apos;occasion se présente.
         </Typography>
         <div className="space-x-5 pt-2">
-          <Button baseUrl="">Commencer</Button>
-          <Button baseUrl="" variant="secondary">
+          <Button baseUrl="/settings">Commencer</Button>
+          <Button baseUrl="/paintings" variant="secondary">
             Liste des peintures
           </Button>
         </div>

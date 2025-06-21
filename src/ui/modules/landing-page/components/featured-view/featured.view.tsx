@@ -103,7 +103,7 @@ const FeaturedView = () => {
             </Typography>
             <Button
               variant="secondary"
-              baseUrl="/login"
+              baseUrl="/connexion"
               icon={{ icon: FaChevronRight }}
               iconPosition="right"
             >

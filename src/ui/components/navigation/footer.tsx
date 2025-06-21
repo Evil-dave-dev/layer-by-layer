@@ -1,4 +1,3 @@
-import React from "react";
 import Container from "../container/container";
 import Typography from "@/ui/design-system/typography/typography";
 import Image from "next/image";
