@@ -19,7 +19,6 @@ const ForgetPasswordContainer = () => {
     formData
   ) => {
     setIsLoading(true);
-    console.log("formData : ", formData);
   };
   return (
     <ForgetPasswordView

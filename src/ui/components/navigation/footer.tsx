@@ -18,7 +18,7 @@ const Footer = () => {
   return (
     <div className="bg-gray-900">
       <Container className="flex justify-between py-10">
-        <div className="flex flex-col items-center gap-1">
+        <div className="flex flex-col gap-4">
           <Typography component="h4" variant="h4" theme="white">
             peintures
           </Typography>

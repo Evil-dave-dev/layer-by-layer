@@ -32,21 +32,21 @@ const Input = ({
           isLoading && "cursor-not-allowed",
           errors[id]
             ? "text-[var(--alert-danger)] placeholder-[var(--alert-danger)] border-[var(--alert-danger)] focus:ring-[var(--alert-danger)]"
-            : "placeholder-gray-600",
-          "w-full p-4 font-light border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary"
+            : "placeholder-gray-600 focus:ring-primary",
+          "w-full p-4 font-light border border-gray-300 rounded focus:outline-none focus:ring-1 "
         )}
         disabled={isLoading}
         {...register(id, {
           required: {
             value: required,
-            message: { errorMessage },
+            message: errorMessage,
           },
         })}
         autoComplete={isAutoCompleted ? "on" : "off"}
       />
       {errors[id] && (
         <Typography variant="caption3" component="span" theme="danger">
-          danger
+          {errors[id]?.message}
         </Typography>
       )}
     </div>

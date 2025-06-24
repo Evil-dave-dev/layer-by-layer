@@ -17,7 +17,6 @@ const LoginContainer = () => {
 
   const onSubmit: SubmitHandler<LoginFormFieldsType> = async (formData) => {
     setIsLoading(true);
-    console.log("formData : ", formData);
   };
   return (
     <LoginView form={{ errors, register, handleSubmit, onSubmit, isLoading }} />
