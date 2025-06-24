@@ -28,6 +28,10 @@
   --borderRadius-sm: 0.8rem;
   --borderRadius-lg: 1.2rem;
   --borderRadius-full: 999rem;
+
+  --alert-danger: #ff4d26;
+  --alert-warning: #ffe207;
+  --alert-success: #02e586;
 }
 
 html {

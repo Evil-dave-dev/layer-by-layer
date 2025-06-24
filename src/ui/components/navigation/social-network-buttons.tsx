@@ -10,9 +10,6 @@ interface Props {
 }
 
 const SocialNetworkButtons = ({ className, theme = "accent" }: Props) => {
-  const action = () => {
-    console.log("hello world");
-  };
   const iconList = footerSocialNetworkLinks.map((socialNetwork) => (
     <Button
       key={uuidv4()}

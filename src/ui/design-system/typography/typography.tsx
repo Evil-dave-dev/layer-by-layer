@@ -26,7 +26,15 @@ interface Props {
     | "p"
     | "span"
     | "label";
-  theme?: "black" | "gray" | "white" | "primary" | "secondary";
+  theme?:
+    | "black"
+    | "gray"
+    | "white"
+    | "primary"
+    | "secondary"
+    | "danger"
+    | "success"
+    | "warning";
   weight?: "regular" | "medium";
   className?: string;
   children: React.ReactNode;
@@ -97,6 +105,15 @@ const Typography = ({
       break;
     case "secondary":
       colorStyles = "text-secondary";
+      break;
+    case "danger":
+      colorStyles = "text-[var(--alert-danger)]";
+      break;
+    case "success":
+      colorStyles = "text-[var(--alert-success)]";
+      break;
+    case "warning":
+      colorStyles = "text-[var(--alert-warning)]";
       break;
   }
 

@@ -4,8 +4,13 @@ import Typography from "@/ui/design-system/typography/typography";
 import Image from "next/image";
 import Link from "next/link";
 import LoginForm from "./login.form";
+import { FormsType } from "@/types/forms";
 
-const LoginView = () => {
+interface Props {
+  form: FormsType;
+}
+
+const LoginView = ({ form }: Props) => {
   return (
     <Container className="grid grid-cols-2 gap-20 mb-32">
       <div className="flex items-center">
@@ -19,22 +24,21 @@ const LoginView = () => {
         </div>
       </div>
       <div className="flex items-center">
-        <Box padding_y="px-5">
+        <Box padding_y="py-5">
           <div className="flex items-center justify-between">
             <Typography variant="h5" component="h1">
-              connexion
+              Connexion
             </Typography>
             <div className="flex items-center gap-2">
-              <Typography variant="caption3" component="span" theme="gray">
+              <Typography variant="caption2" component="span" theme="gray">
                 Tu n&apos;as pas de compte ?
               </Typography>
-              <Typography variant="caption3" component="span" theme="primary">
+              <Typography variant="caption2" component="span" theme="primary">
                 <Link href="/connexion/inscription">S&apos;inscrire</Link>
               </Typography>
             </div>
-            <div></div>
           </div>
-          <LoginForm />
+          <LoginForm form={form} />
         </Box>
       </div>
     </Container>

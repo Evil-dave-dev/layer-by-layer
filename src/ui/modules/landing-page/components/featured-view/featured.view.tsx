@@ -87,7 +87,7 @@ const FeaturedView = () => {
         <div className="grid grid-cols-2 gap-7 col-span-7">{featuredList}</div>
         <div className="flex flex-col justify-between gap-10 col-span-5">
           <div>
-            <Typography variant="h2" component="h2" className="mb-5">
+            <Typography variant="h3" component="h2" className="mb-5">
               Application de peinture au top la famille
             </Typography>
             <Typography

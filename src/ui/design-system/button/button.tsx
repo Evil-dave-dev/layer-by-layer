@@ -16,6 +16,8 @@ interface Props {
   linkType?: LinkType;
   action?: Function;
   children?: React.ReactNode;
+  type?: "button" | "submit";
+  widthFull?: boolean;
 }
 
 const Button = ({
@@ -28,8 +30,10 @@ const Button = ({
   isLoading,
   baseUrl,
   linkType = "internal",
+  type = "button",
   action = () => {},
   children,
+  widthFull = false,
 }: Props) => {
   let variantStyles: string = "",
     sizeStyles: string = "",
@@ -126,16 +130,17 @@ const Button = ({
 
   const buttonElement = (
     <button
-      type="button"
+      type={type}
       className={clsx(
         variantStyles,
         iconSize,
         sizeStyles,
-        isLoading && "cursor-wait",
+        widthFull && "w-full",
+        isLoading && "cursor-not-allowed",
         "relative animate"
       )}
       onClick={handleClick}
-      disabled={disabled}
+      disabled={disabled || isLoading ? true : false}
     >
       {buttonContent}
     </button>
