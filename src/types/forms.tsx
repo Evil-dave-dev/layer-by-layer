@@ -16,11 +16,8 @@ export interface RegisterFormFieldsType {
 export interface LoginFormFieldsType {
   email: string;
   password: string;
-  how_did_hear: string;
 }
 
-export interface ForgetPasswordFieldsType {
+export interface ForgetPasswordFormFieldsType {
   email: string;
-  password: string;
-  how_did_hear: string;
 }

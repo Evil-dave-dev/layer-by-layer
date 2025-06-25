@@ -2,9 +2,9 @@ import Container from "@/ui/components/container/container";
 import Box from "@/ui/design-system/box/box";
 import Typography from "@/ui/design-system/typography/typography";
 import Image from "next/image";
-import Link from "next/link";
 import ForgetPasswordForm from "./forget-password.form";
 import { FormsType } from "@/types/forms";
+import Link from "next/link";
 
 interface Props {
   form: FormsType;
@@ -26,14 +26,17 @@ const ForgetPasswordView = ({ form }: Props) => {
       <div className="flex items-center">
         <Box padding_y="py-5">
           <div className="flex items-center justify-between">
-            <Typography variant="h5" component="h2">
+            <Typography variant="h5" component="h2" weight="semibold">
               Mot de passe perdu
             </Typography>
-            <div className="flex items-center gap-2">
-              <Typography variant="caption2" component="span" theme="primary">
-                <Link href="/connexion">Connexion</Link>
-              </Typography>
-            </div>
+            <Typography
+              variant="caption3"
+              component="span"
+              theme="primary"
+              weight="semibold"
+            >
+              <Link href="/connexion/inscription">Connexion</Link>
+            </Typography>
           </div>
           <ForgetPasswordForm form={form} />
         </Box>

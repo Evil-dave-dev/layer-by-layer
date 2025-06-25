@@ -1,25 +1,45 @@
 "use client";
-import { useState } from "react";
 import ForgetPasswordView from "./forget-password.view";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { ForgetPasswordFieldsType } from "@/types/forms";
+import { ForgetPasswordFormFieldsType } from "@/types/forms";
+import { useToggle } from "@/hooks/use-toggle";
+import { sendEmailToResetPassword } from "@/api/authentication";
+import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 
 const ForgetPasswordContainer = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const router = useRouter();
+  const { value: isLoading, setValue: setIsLoading } = useToggle();
 
   const {
     handleSubmit,
     formState: { errors },
     register,
-    setError,
     reset,
-  } = useForm<ForgetPasswordFieldsType>();
+  } = useForm<ForgetPasswordFormFieldsType>();
 
-  const onSubmit: SubmitHandler<ForgetPasswordFieldsType> = async (
+  const handleResetPassword = async ({
+    email,
+  }: ForgetPasswordFormFieldsType) => {
+    const { error } = await sendEmailToResetPassword(email);
+    if (error) {
+      setIsLoading(false);
+      toast.error(error.message);
+      return;
+    }
+    toast.success(`un email a été expédié à l'adresse ${email}`);
+    setIsLoading(false);
+    reset();
+    router.push("/connexion");
+  };
+
+  const onSubmit: SubmitHandler<ForgetPasswordFormFieldsType> = async (
     formData
   ) => {
     setIsLoading(true);
+    handleResetPassword(formData);
   };
+
   return (
     <ForgetPasswordView
       form={{ errors, register, handleSubmit, onSubmit, isLoading }}

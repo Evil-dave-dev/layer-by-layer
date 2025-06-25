@@ -1,5 +1,5 @@
 const Paintings = () => {
-  return <div>Paintings</div>;
+  return <div>Peintures</div>;
 };
 
 export default Paintings;

@@ -8,13 +8,18 @@ export const footerApplicationLinks: AppLinks[] = [
     type: "internal",
   },
   {
-    label: "settings",
-    baseUrl: "/settings",
+    label: "parametres",
+    baseUrl: "/parametres",
     type: "internal",
   },
   {
-    label: "project",
-    baseUrl: "/project",
+    label: "projets",
+    baseUrl: "/projets",
+    type: "internal",
+  },
+  {
+    label: "peintures",
+    baseUrl: "/peintures",
     type: "internal",
   },
 ];

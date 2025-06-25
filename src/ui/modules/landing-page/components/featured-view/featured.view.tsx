@@ -66,7 +66,7 @@ const FeaturedView = () => {
       <Typography
         variant="h6"
         component="h3"
-        weight="medium"
+        weight="semibold"
         className="text-center"
       >
         {feature.title}
@@ -88,7 +88,7 @@ const FeaturedView = () => {
         <div className="flex flex-col justify-between gap-10 col-span-5">
           <div>
             <Typography variant="h3" component="h2" className="mb-5">
-              Application de peinture au top la famille
+              Layer by Layer
             </Typography>
             <Typography
               variant="body-lg"
@@ -97,7 +97,7 @@ const FeaturedView = () => {
               className="mb-8"
             >
               Conçue à Lille par un développeur de renom, cette application de
-              peinture permettra de garde en mémoire les teintes que vous avez
+              peinture permettra de garder en mémoire les teintes que vous avez
               utilisées pour vos orks, guerriers du Chaos, nains ou
               hommes-lézards et vous les restituera fidèlement.
             </Typography>

@@ -26,19 +26,40 @@ const RegisterView = ({ form }: Props) => {
       <div className="flex items-center">
         <Box padding_y="py-4">
           <div className="flex items-center justify-between">
-            <Typography variant="h5" component="h2">
+            <Typography variant="h5" component="h2" weight="semibold">
               Inscription
             </Typography>
             <div className="flex items-center gap-2">
-              <Typography variant="caption2" component="span" theme="gray">
+              <Typography variant="caption3" component="span" theme="gray">
                 Tu as déjà un compte ?
               </Typography>
-              <Typography variant="caption2" component="span" theme="primary">
+              <Typography
+                variant="caption3"
+                component="span"
+                theme="primary"
+                weight="semibold"
+              >
                 <Link href="/connexion">Connexion</Link>
               </Typography>
             </div>
           </div>
           <RegisterForm form={form} />
+          <Typography
+            variant="caption3"
+            theme="gray"
+            className="max-w-md mx-auto space-y-1 text-center"
+          >
+            <p>En t&apos;inscrivant, tu acceptes les</p>
+            <div>
+              <Link href="/#" className="text-gray">
+                conditions d&apos;utilisation
+              </Link>{" "}
+              et la{" "}
+              <Link href="/#" className="text-gray">
+                politique de confidentialité
+              </Link>
+            </div>
+          </Typography>
         </Box>
       </div>
     </Container>

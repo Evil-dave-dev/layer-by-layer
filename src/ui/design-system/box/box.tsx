@@ -16,7 +16,7 @@ const Box = ({
   return (
     <div
       className={clsx(
-        "w-full border border-gray-400 rounded bg-white",
+        "w-full border border-gray-200 rounded bg-white",
         className,
         padding_x,
         padding_y

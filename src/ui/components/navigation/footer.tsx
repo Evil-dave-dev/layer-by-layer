@@ -79,7 +79,7 @@ const FooterLink = ({ data }: footerLinksProps) => {
       <Typography
         theme="white"
         variant="caption2"
-        weight="medium"
+        weight="semibold"
         className="pb-5"
       >
         {data.label}

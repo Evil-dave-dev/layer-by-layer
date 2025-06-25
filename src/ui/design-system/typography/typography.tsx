@@ -35,7 +35,7 @@ interface Props {
     | "danger"
     | "success"
     | "warning";
-  weight?: "regular" | "medium";
+  weight?: "regular" | "semibold";
   className?: string;
   children: React.ReactNode;
 }
@@ -122,7 +122,7 @@ const Typography = ({
       className={clsx(
         variantStyles,
         colorStyles,
-        weight === "medium" && "font-medium",
+        weight === "semibold" && "font-semibold",
         className
       )}
     >

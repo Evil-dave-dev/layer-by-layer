@@ -6,7 +6,14 @@ import Link from "next/link";
 
 interface Props {
   size?: "small" | "medium" | "large";
-  variant?: "accent" | "secondary" | "outline" | "disabled" | "icon";
+  variant?:
+    | "accent"
+    | "secondary"
+    | "outline"
+    | "disabled"
+    | "icon"
+    | "success"
+    | "danger";
   icon?: IconProps;
   iconTheme?: "accent" | "secondary" | "gray";
   iconPosition?: "left" | "right";
@@ -54,6 +61,14 @@ const Button = ({
     case "disabled":
       variantStyles =
         "bg-gray-400 border border-gray-400 text-gray-600 rounded cursor-not-allowed";
+      break;
+    case "success":
+      variantStyles =
+        "bg-[var(--alert-success)] hover:bg-[var(--alert-success)]/75 text-white rounded";
+      break;
+    case "danger":
+      variantStyles =
+        "bg-[var(--alert-danger)] hover:[var(--alert-danger)]/75 text-white rounded";
       break;
     case "icon":
       if (iconTheme === "accent") {

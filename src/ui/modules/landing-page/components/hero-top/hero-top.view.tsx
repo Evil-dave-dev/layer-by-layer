@@ -11,13 +11,15 @@ const HeroTopView = () => {
           Peins tes warhammer
         </Typography>
         <Typography variant="body-base" component="p" theme="gray">
-          Arrêtes de jouer avec des bouts de papiers et joue avec des figurines
-          magnifiquement peintes par tes soins. Enregistre les peintures que tu
-          utilises et reviens dessus dès que l&apos;occasion se présente.
+          Arrêtes de jouer avec des bouts de papiers et sers toi de tes
+          figurines magnifiquement peintes par tes soins. Utilise Layer by Layer
+          pour enregistrer tes combinaisons de peintures et tu pourras revenir
+          dessus une fois tout les 6 mois (même si t&apos;es bourré), tout sera
+          gardé en mémoire.
         </Typography>
         <div className="space-x-5 pt-2">
-          <Button baseUrl="/settings">Commencer</Button>
-          <Button baseUrl="/paintings" variant="secondary">
+          <Button baseUrl="/parametres">Commencer</Button>
+          <Button baseUrl="/peintures" variant="secondary">
             Liste des peintures
           </Button>
         </div>
