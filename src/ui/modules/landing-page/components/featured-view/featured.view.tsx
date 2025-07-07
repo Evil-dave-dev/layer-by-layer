@@ -15,21 +15,21 @@ interface FeaturesListInterface {
 
 const featuresData: FeaturesListInterface[] = [
   {
-    imagePath: "/assets/svg/document.svg",
+    imagePath: "/assets/svg/projects.svg",
     imageAlt: "illustration",
     title: "Projets",
     description:
       "Consulte la liste de tous les projets que tu as pu faire jusqu'à maintenant",
   },
   {
-    imagePath: "/assets/svg/pie-chart.svg",
+    imagePath: "/assets/svg/paintings.svg",
     imageAlt: "illustration",
     title: "Peintures",
     description:
       "Consulte la liste des peintures que tu peux trouver sur l'application",
   },
   {
-    imagePath: "/assets/svg/creativity.svg",
+    imagePath: "/assets/svg/tutorial.svg",
     imageAlt: "illustration",
     title: "Tutoriels",
     description:
@@ -82,8 +82,8 @@ const FeaturedView = () => {
     </div>
   ));
   return (
-    <div className="bg-gray-300">
-      <Container className="grid grid-cols-12 gap-24 py-24">
+    <div className="bg-linear-to-r from-green-500 to-yellow-200 relative">
+      <Container className="grid grid-cols-12 gap-24 py-24 relative z-1">
         <div className="grid grid-cols-2 gap-7 col-span-7">{featuredList}</div>
         <div className="flex flex-col justify-between gap-10 col-span-5">
           <div>
