@@ -5,6 +5,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
   sendPasswordResetEmail,
+  sendEmailVerification,
 } from "firebase/auth";
 
 export const firebaseCreateUser = async (email: string, password: string) => {
@@ -66,6 +67,31 @@ export const sendEmailToResetPassword = async (email: string) => {
       error: {
         code: firebaseError.code,
         message: firebaseError.message,
+      },
+    };
+  }
+};
+
+export const sendEmailVerificationProcedure = async () => {
+  if (auth.currentUser) {
+    try {
+      await sendEmailVerification(auth.currentUser);
+      return { data: true };
+    } catch (error) {
+      const firebaseError = error as FirebaseError;
+      // @todo format error
+      return {
+        error: {
+          code: firebaseError.code,
+          message: firebaseError.message,
+        },
+      };
+    }
+  } else {
+    return {
+      error: {
+        code: "unknow",
+        message: "une erreur est survenue",
       },
     };
   }

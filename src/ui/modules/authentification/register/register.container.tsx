@@ -2,7 +2,10 @@
 import { RegisterFormFieldsType } from "@/types/forms";
 import { SubmitHandler, useForm } from "react-hook-form";
 import RegisterView from "./register.view";
-import { firebaseCreateUser } from "@/api/authentication";
+import {
+  firebaseCreateUser,
+  sendEmailVerificationProcedure,
+} from "@/api/authentication";
 import { toast } from "react-toastify";
 import { useToggle } from "@/hooks/use-toggle";
 import { firestoreCreateDocument } from "@/api/firestore";
@@ -36,7 +39,7 @@ const RegisterContainer = () => {
     toast.success("Creation du compte réussie");
     setIsLoading(false);
     reset();
-    // @todo send email confirmation procedure
+    sendEmailVerificationProcedure();
   };
 
   const handleCreateUserAuthentication = async ({
