@@ -82,7 +82,7 @@ const FeaturedView = () => {
     </div>
   ));
   return (
-    <div className="bg-linear-to-r from-green-500 to-yellow-200 relative">
+    <div className="bg-gray-100 relative">
       <Container className="grid grid-cols-12 gap-24 py-24 relative z-1">
         <div className="grid grid-cols-2 gap-7 col-span-7">{featuredList}</div>
         <div className="flex flex-col justify-between gap-10 col-span-5">

@@ -1,3 +1,4 @@
+"use client";
 import LandingPageView from "./landing-page.view";
 
 const LandingPageContainer = () => {

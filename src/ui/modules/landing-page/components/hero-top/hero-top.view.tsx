@@ -25,8 +25,8 @@ const HeroTopView = () => {
         </div>
       </div>
       <Image
-        src="/assets/svg/planet.svg"
-        alt="planet"
+        src="/assets/images/goldendemon.jpg"
+        alt="goldendemon"
         width={400}
         height={400}
         className="absolute top-0 right-0 z-0"

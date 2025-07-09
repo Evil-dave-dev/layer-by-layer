@@ -1,14 +1,16 @@
-"use client";
-import Seo from "@/ui/components/seo/seo";
 import LandingPageContainer from "@/ui/modules/landing-page/landing-page.container";
+
+export const metadata = {
+  title: "Layer by Layer",
+  description: "Venez peindre vos figurines de Warhammer",
+  icons: {
+    icon: "/assets/images/favicon.png",
+  },
+};
 
 const HomePage = () => {
   return (
     <>
-      <Seo
-        title="layer by layer"
-        description="venez peindre vos figurines de warhammer"
-      />
       <LandingPageContainer />
     </>
   );

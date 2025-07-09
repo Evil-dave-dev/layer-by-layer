@@ -1,16 +1,15 @@
-import Seo from "@/ui/components/seo/seo";
 import RegisterContainer from "@/ui/modules/authentification/register/register.container";
 
+export const metadata = {
+  title: "Inscription | Layer by Layer",
+  description: "Créez un compte pour commencer à peindre vos figurines.",
+  icons: {
+    icon: "/assets/images/favicon.png",
+  },
+};
+
 const Register = () => {
-  return (
-    <>
-      <Seo
-        title="layer by layer"
-        description="venez peindre vos figurines de warhammer"
-      />
-      <RegisterContainer />
-    </>
-  );
+  return <RegisterContainer />;
 };
 
 export default Register;

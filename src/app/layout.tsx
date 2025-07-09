@@ -3,7 +3,7 @@ import Navigation from "@/ui/components/navigation/navigation";
 import Breadcrumbs from "@/ui/components/breadcrumbs/breadcrumbs";
 import Footer from "@/ui/components/navigation/footer";
 import { usePathname } from "next/navigation";
-import "@/app/globals.css";
+import "@/styles/globals.css";
 import { Flip, ToastContainer } from "react-toastify";
 import Container from "@/ui/components/container/container";
 import UserAccountNavigation from "@/ui/components/navigation/user-account-navigation";
