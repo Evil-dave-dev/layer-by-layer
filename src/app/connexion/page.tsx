@@ -9,11 +9,7 @@ export const metadata = {
 };
 
 const Connexion = () => {
-  return (
-    <>
-      <LoginContainer />
-    </>
-  );
+  return <LoginContainer />;
 };
 
 export default Connexion;

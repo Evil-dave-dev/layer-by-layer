@@ -3,10 +3,12 @@ import Navigation from "@/ui/components/navigation/navigation";
 import Breadcrumbs from "@/ui/components/breadcrumbs/breadcrumbs";
 import Footer from "@/ui/components/navigation/footer";
 import { usePathname } from "next/navigation";
-import "@/styles/globals.css";
 import { Flip, ToastContainer } from "react-toastify";
 import Container from "@/ui/components/container/container";
 import UserAccountNavigation from "@/ui/components/navigation/user-account-navigation";
+import AuthUserProvider from "@/context/AuthUserContext";
+import Session from "@/ui/components/session/session";
+import "@/styles/globals.css";
 
 interface Props {
   children: React.ReactNode;
@@ -36,11 +38,15 @@ const Layout = ({ children }: Props) => {
   return (
     <html lang="fr">
       <body>
-        <Navigation />
-        <ToastContainer autoClose={8000} transition={Flip} />
-        {!isHome && <Breadcrumbs />}
-        {view}
-        <Footer />
+        <AuthUserProvider>
+          <Session>
+            <Navigation />
+            <ToastContainer autoClose={8000} transition={Flip} />
+            {!isHome && <Breadcrumbs />}
+            {view}
+            <Footer />
+          </Session>
+        </AuthUserProvider>
       </body>
     </html>
   );

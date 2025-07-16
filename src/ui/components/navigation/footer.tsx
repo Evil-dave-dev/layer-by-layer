@@ -34,6 +34,7 @@ const Footer = () => {
               width={251}
               height={240}
               alt="tuto peintures | youtube"
+              className="h-auto"
             />
           </a>
         </div>

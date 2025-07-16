@@ -29,7 +29,8 @@ const HeroTopView = () => {
         alt="goldendemon"
         width={400}
         height={400}
-        className="absolute top-0 right-0 z-0"
+        className="absolute top-0 right-0 z-0 h-auto"
+        priority
       />
     </Container>
   );
